@@ -1,0 +1,34 @@
+:root {
+    --primary: rgb(24, 23, 27);
+    --textColor: rgb(255,255,255)
+}
+@font-face {
+    font-family: montserrat;
+    src: url(Fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: montserrat-italic;
+    src: url(Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+body {
+    font-family: montserrat;
+
+    background-color: var(--primary);
+    color: var(--textColor);
+
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.329);
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 {
+    margin: 0;
+    text-align: center;
+}
