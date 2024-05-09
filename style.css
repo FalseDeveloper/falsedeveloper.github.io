@@ -16,7 +16,7 @@ body {
     background-color: var(--primary);
     color: var(--textColor);
 
-    margin: 50px;
+    margin: 0;
 }
 
 header {
