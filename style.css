@@ -1,5 +1,5 @@
 :root {
-    --primary: rgb(24, 23, 27);
+    --primary: rgb(12, 12, 22);
     --textColor: rgb(255,255,255)
 }
 @font-face {
@@ -35,4 +35,8 @@ header > a {
     font-size: 2pc;
     font-weight: bolder;
     text-decoration: line-through solid rgba(71, 67, 99, 0.171) 3pc;
+}
+
+.linkSection {
+    
 }
