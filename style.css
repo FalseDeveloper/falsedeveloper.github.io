@@ -34,9 +34,38 @@ header > a {
     color: rgb(255, 255, 255);
     font-size: 2pc;
     font-weight: bolder;
-    text-decoration: line-through solid rgba(71, 67, 99, 0.171) 3pc;
+    text-decoration: line-through solid rgba(44, 36, 99, 0.171) 3pc;
+}
+
+main {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .linkSection {
-    
+    background: center / cover no-repeat url(IMG/HOH.png), rgba(0, 0, 0, 0.329);
+    width: 90%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    color: white;
+    text-decoration: none;
+
+    transition: width .7s ease-in-out;
+}
+
+.linkSection:hover {
+    width: 93%;
+}
+
+.linkSection > h2 {
+    align-self: flex-end;
+    font-size: 3pc;
+    margin: 1%;
 }
