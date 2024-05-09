@@ -16,7 +16,7 @@ body {
     background-color: var(--primary);
     color: var(--textColor);
 
-    margin: 0;
+    margin: 50px;
 }
 
 header {
@@ -68,8 +68,4 @@ main {
     align-self: flex-end;
     font-size: 3pc;
     margin: 1%;
-}
-
-.linkSection:first {
-
 }
