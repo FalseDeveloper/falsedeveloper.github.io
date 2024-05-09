@@ -21,11 +21,16 @@ body {
 
 header {
     background-color: rgba(0, 0, 0, 0.329);
-    height: 10vh;
+    height: 12vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+}
+
+header > h3 {
+    margin: 0;
 }
 
 header > a {
@@ -68,4 +73,27 @@ main {
     align-self: flex-end;
     font-size: 3pc;
     margin: 1%;
+}
+
+.linkSection > p {
+    align-self: flex-end;
+    text-align: end;
+    margin: 1%;
+}
+
+main > h1 {
+    transition: font-size .5s ease-in-out;
+}
+
+main > h1:hover {
+    font-size: 2.1pc;
+}
+
+main > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > ul > li {
+    width: 50%;
 }
