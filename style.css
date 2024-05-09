@@ -28,7 +28,11 @@ header {
     align-items: center;
 }
 
-header > h1 {
-    margin: 0;
-    text-align: center;
+header > a {
+    margin: 0 5px;
+
+    color: rgb(255, 255, 255);
+    font-size: 2pc;
+    font-weight: bolder;
+    text-decoration: line-through solid rgba(71, 67, 99, 0.171) 3pc;
 }
