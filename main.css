@@ -1,0 +1,49 @@
+/*SETUP*/
+
+@font-face {
+    font-family: montserrat;
+    src: url("Fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: montserrat-italic;
+    src: url("Fonts/Montserrat-Italic-VariableFont_wght.ttf");
+}
+
+@keyframes background-scroll {
+    from {background-position: 0vw 0vh;}
+    to {background-position: 100vw 100vh;}
+}
+
+/*TAGS*/
+
+* {
+    font-family: montserrat;
+    color: white;
+}
+
+body {
+    margin: 0;
+    background: rgb(0, 26, 20);
+}
+
+/*CLASSES*/
+
+.background {
+    background: url("IMG/Checkers.png");
+    background-size: 100px;
+    opacity: .05;
+    animation: background-scroll 60s linear infinite;
+
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+
+    z-index: -1;
+}
+
+.title {
+    text-align: center;
+}
+
+/*IDS*/
