@@ -94,11 +94,12 @@ main > h1 {
 }
 
 .game_video {
-  
+  width: 100%;
 }
 
 .game_description {
   font-size: 1vw;
+  margin-right: 3vw;
 }
 
 .game_title {
