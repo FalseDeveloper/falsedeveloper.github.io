@@ -111,4 +111,24 @@ main > h1 {
   padding: 1vw;
 }
 
+@media (max-width: 800px) {
+  .game_showcase {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .game_showcase > ul {
+    width: 85vw;
+    padding: 0;
+    margin: -20vh 5vw 5vh 5vw;
+  }
+
+  .game_description {
+    font-size: 4vw;
+    width: 100%;
+  }
+  .game_video {
+    width: 90vw;
+  }
+}
+
 /*IDS*/
