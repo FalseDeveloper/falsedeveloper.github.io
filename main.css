@@ -1,49 +1,113 @@
 /*SETUP*/
 
 @font-face {
-    font-family: montserrat;
-    src: url("Fonts/Montserrat-VariableFont_wght.ttf");
+  font-family: montserrat;
+  src: url("FONT/Montserrat-VariableFont_wght.ttf");
 }
 @font-face {
-    font-family: montserrat-italic;
-    src: url("Fonts/Montserrat-Italic-VariableFont_wght.ttf");
+  font-family: montserrat-italic;
+  src: url("FONT/Montserrat-Italic-VariableFont_wght.ttf");
 }
 
 @keyframes background-scroll {
-    from {background-position: 0vw 0vh;}
-    to {background-position: 100vw 100vh;}
+  from {
+    background-position: 0vw 0vh;
+  }
+  to {
+    background-position: 100vw 100vh;
+  }
 }
 
 /*TAGS*/
 
 * {
-    font-family: montserrat;
-    color: white;
+  font-family: montserrat;
+  color: white;
 }
 
 body {
-    margin: 0;
-    background: rgb(0, 26, 20);
+  background: rgb(0, 26, 20);
+
+  margin: 0;
+}
+
+header {
+  background: rgb(0, 5, 4);
+  box-shadow: 0px 0px 30px rgb(0, 5, 4);
+
+  height: 8vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 {
+  width: 20vw;
+  text-align: center;
+}
+
+main {
+  background-color: rgba(0, 5, 4, 0.568);
+  border-radius: 20px;
+  
+  margin: 1vw;
+}
+
+main > h1 {
+  padding: 1vw 1vw 0vw 1vw;
 }
 
 /*CLASSES*/
 
 .background {
-    background: url("IMG/Checkers.png");
-    background-size: 100px;
-    opacity: .05;
-    animation: background-scroll 60s linear infinite;
+  background: url("IMG/Checkers.png");
+  background-size: 100px;
+  opacity: 0.05;
+  animation: background-scroll 60s linear infinite;
 
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 
-    z-index: -1;
+  z-index: -1;
 }
 
-.title {
-    text-align: center;
+.game_section {
+  background-color: rgba(0, 5, 4, 0.568);
+  border-radius: 20px;
+
+  margin: 1vw;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game_showcase {
+  background-color: black;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.game_video {
+  
+}
+
+.game_description {
+  font-size: 1vw;
+}
+
+.game_title {
+  background: rgba(0, 0, 0, 0.637);
+  border-radius: 20px;
+  font-size: 3vw;
+
+  width: 100vw;
+  padding: 1vw;
 }
 
 /*IDS*/

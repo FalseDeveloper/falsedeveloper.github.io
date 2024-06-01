@@ -1,0 +1,12 @@
+/*SETUP*/
+
+@font-face {
+    font-family: montserrat;
+    src: url("FONT/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: montserrat-italic;
+    src: url("FONT/Montserrat-Italic-VariableFont_wght.ttf");
+}
+
+/*PRESETS*/
