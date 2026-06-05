@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEOWWW</title>
+    <style>
+      body {
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background: rgb(36, 35, 34);
+        color: white;
+      }
+      input {
+        width: 2em;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.548);
+        color: white;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .input_button {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Awesome meowster calculator</h2>
+    <span
+      >Remember that for offset, X = +right/-left, Y =
+      +up/-down, Z = +forwards/-backwards</span
+    >
+    <br /><br />
+    <form action="" id="main_form">
+      <label>Rotation: </label>
+      <input type="number" name="rot_x" id="rot_x" placeholder="X" />
+      <input type="number" name="rot_y" id="rot_y" placeholder="Y" />
+      <input type="number" name="rot_z" id="rot_z" placeholder="Z" />
+      <br /><br />
+      <label>Offset: </label>
+      <input type="number" name="off_x" id="off_x" placeholder="X" />
+      <input type="number" name="off_y" id="off_y" placeholder="Y" />
+      <input type="number" name="off_z" id="off_z" placeholder="Z" />
+      <br /><br />
+      <input type="submit" value="Solve :3" class="input_button" />
+    </form>
+    <br />
+    <label>Result: </label>
+    <label id="result_label">-</label>
+
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+    ></iframe>
+  </body>
+
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+
+  <!-- gng im ngl i didnt write a lot of this im so lazy -->
+  <script defer type="module">
+    const result_label = document.getElementById("result_label");
+
+    document
+      .getElementById("main_form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const formResults = Object.fromEntries(formData.entries());
+
+        const result = localOffsetToWorldStr(
+          new THREE.Vector3(
+            parseFloat(formResults.rot_x),
+            parseFloat(formResults.rot_y),
+            parseFloat(formResults.rot_z),
+          ),
+          new THREE.Vector3(
+            parseFloat(formResults.off_x),
+            parseFloat(formResults.off_y),
+            parseFloat(formResults.off_z),
+          ),
+        );
+
+        result_label.textContent = result;
+      });
+
+    const DEG2RAD = Math.PI / 180;
+
+    function localOffsetToWorldStr(rotDeg, offset, precision = 3) {
+      const q = new THREE.Quaternion().setFromEuler(
+        new THREE.Euler(
+          rotDeg.x * DEG2RAD,
+          rotDeg.y * DEG2RAD,
+          rotDeg.z * DEG2RAD,
+        ),
+      );
+
+      const v = offset.clone().applyQuaternion(q);
+
+      return `${-v.x.toFixed(precision)}, ${-v.y.toFixed(precision)}, ${-v.z.toFixed(precision)}`;
+    }
+  </script>
+</html>
