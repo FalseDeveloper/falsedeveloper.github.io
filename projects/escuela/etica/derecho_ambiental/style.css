@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(rgb(14, 17, 17), rgb(26, 31, 30));
+    background: linear-gradient(rgb(39, 44, 44), rgb(9, 10, 10));
 
     min-height: 100dvh;
 
@@ -38,9 +38,10 @@ full {
 
 .sourceContainer {
     width: calc(100% - 10dvw);
-    height: calc(100% - 10dvw);;
+    height: calc(100% - 10dvw);
 
     flex: 1;
+    position: relative;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -50,8 +51,8 @@ full {
 }
 
 .sourceSprite {
-    width: 20dvh;
-    height: 20dvh;
+    width: 10dvw;
+    height: 10dvw;
 
     position: relative;
 }
@@ -76,6 +77,28 @@ full {
     text-align: center;
 
     text-shadow: 0px 0px 1.5dvh white;
+}
+
+.centerButton div {
+    position: absolute;
+    top: 100%;
+
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    font-size: 3dvh;
+    text-align: center;
+
+    text-shadow: 0px 0px 1.5dvh white;
+}
+
+.centerButton img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .trashSprite {
@@ -122,13 +145,56 @@ a {
     image-rendering: crisp-edges;
 }
 
+.positive {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 30dvh;
+    height: 30dvh;
+
+    transform: translate(0%, -50%);
+
+    image-rendering: crisp-edges;
+}
+
 .img_glow {
     z-index: -1;
 
     opacity: 50%;
 
-    filter: blur(2dvh) brightness(3);
+    filter: blur(2dvh) brightness(1.5);
 }
+
+
+
 .trashbag:hover {
     cursor: pointer;
 }
+
+/* ############ */
+
+.node {
+  position: absolute;
+  padding: 20px 30px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background: white;
+}
+
+#connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+
+  z-index: -1;
+}
+
+#connections line {
+  stroke: #fff;
+  stroke-width: 2;
+  marker-end: url(#arrowhead);
+}
+

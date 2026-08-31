@@ -1,34 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Derecho Ambiental</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1 class="title">Fuentes de daño ambiental</h1>
     <div class="sourceContainer">
-        <div class="sourceSprite">
-            <img src="img/agroquimicos.png" alt="" class="sprite">
-            <img src="img/agroquimicos.png" alt="" class="sprite img_glow">
-            <div>Agroquimicos</div>
-        </div>
-        <a class="sourceSprite trashSprite" href="hub.html">
-            <img src="img/trashbag.png" alt="" class="sprite">
-            <img src="img/trashbag.png" alt="" class="sprite img_glow">
-            <div>Contaminacion</div>
-        </a>
-        <div class="sourceSprite secondSprite">
-            <img src="img/agroquimicos.png" alt="" class="sprite">
-            <img src="img/agroquimicos.png" alt="" class="sprite img_glow">
-            <div>1</div>
-        </div>
-        <div class="sourceSprite bottomSprite ">
-            <img src="img/agroquimicos.png" alt="" class="sprite">
-            <img src="img/agroquimicos.png" alt="" class="sprite img_glow">
-            <div>2</div>
-        </div>
+      <div class="sourceSprite" id="side1">
+        <img src="img/agroquimicos.png" alt="" class="sprite" />
+        <img src="img/agroquimicos.png" alt="" class="sprite img_glow" />
+        <div>Agroquimicos</div>
+      </div>
+      <a class="sourceSprite trashSprite" id="center" href="hub.html">
+        <img src="img/daño.png" alt="" class="sprite" />
+        <img src="img/daño.png" alt="" class="sprite img_glow" />
+        <div>Daño</div>
+      </a>
+      <div class="sourceSprite secondSprite" id="side2">
+        <img src="img/deforestacion.png" alt="" class="sprite" />
+        <img src="img/deforestacion.png" alt="" class="sprite img_glow" />
+        <div>Desmonte con maquinaria pesada</div>
+      </div>
+      <div class="sourceSprite bottomSprite" id="side3">
+        <img src="img/industrial.png" alt="" class="sprite" />
+        <img src="img/industrial.png" alt="" class="sprite img_glow" />
+        <div>Parque Industrial</div>
+      </div>
+
+      <svg id="connections">
+        <defs>
+          <marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="9"
+            refY="3.5"
+            orient="auto"
+          >
+            <polygon points="0 0, 10 3.5, 0 7" fill="white" />
+          </marker>
+        </defs>
+      </svg>
     </div>
-</body>
+  </body>
+  <script src="lines.js"></script>
+  <script>
+    let central = document.querySelector("#center");
+    let side1 = document.querySelector("#side1");
+    let side2 = document.querySelector("#side2");
+    let side3 = document.querySelector("#side3");
+
+    connect(side1, central);
+    connect(side2, central);
+    connect(side3, central);
+  </script>
 </html>
