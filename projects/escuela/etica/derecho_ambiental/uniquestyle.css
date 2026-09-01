@@ -31,6 +31,29 @@ body {
     height: 10dvh;
 }
 
+.smalltitle {
+    text-align: center;
+    font-weight: normal;
+    font-size: 3dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow: 0px 0px 1.5dvh white;
+
+    height: 4dvh;
+}
+
+.snapdown {
+    position: absolute;
+    width: 50dvw;
+    height: 3dvh;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 full {
     min-height: 100%;
     min-width: 100%;
